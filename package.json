@@ -1,6 +1,6 @@
 {
   "name": "ian-design",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "author": "Ian-Dev",
   "main": "dist/components/index.js",
   "types": "dist/components/index.d.ts",
@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/Ian8829/ian-design"
   },
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "keywords": [
     "npm",
