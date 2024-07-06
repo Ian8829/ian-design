@@ -1,6 +1,6 @@
 {
   "name": "ian-design",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "author": "Ian-Dev",
   "main": "dist/components/index.js",
   "types": "dist/components/index.d.ts",
