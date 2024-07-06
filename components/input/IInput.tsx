@@ -11,7 +11,7 @@ const IInput: FC<ITextInputProps> = ({ register, name }) => {
   if (!register || !name) {
     return <StyledIInput />
   }
-  return <input {...register(name)} />
+  return <StyledIInput {...register(name)} />
 }
 
 const StyledIInput = styled.input`

@@ -17,7 +17,7 @@ const ITimelineListItem: FC<ITimelineListItemProps> = ({
   isLast,
   profileSrc,
 }) => {
-  const defaultProfile = '/icons/default_profile.jpg'
+  const defaultProfile = '/public/icons/default_profile.jpg'
 
   return (
     <StyledTimelineContainer>
