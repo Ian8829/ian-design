@@ -33,6 +33,12 @@ jobs:
       - name: Compile package
         run: npm run compile
 
+      - name: Configure npm with auth token
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+          npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}
+          npm config set always-auth true
+
       - name: Publish to npm
         run: |
           npm publish --access public
