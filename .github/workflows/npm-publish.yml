@@ -33,14 +33,18 @@ jobs:
       - name: Compile package
         run: npm run compile
 
-      - name: TEST fake NPM_AUTH_TOKEN
-        run: echo "fake token is in=${{ secrets.NPM_AUTH_TOKEN }} and=${{ secrets.TEST_VALUE }}" > ~/.npmrc
-
-      - name: Display .npmrc for debugging
-        run: cat ~/.npmrc
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "ghjkghj@naver.com"
+          git config --global user.name "ian8829"
+          git add package.json
+          git commit -m "Update package version"
+          git push
+        env:
+          GIT_COMMIT_TOKEN: ${{ secrets.GIT_COMMIT_TOKEN }}
 
       - name: Publish to npm
         run: |
           npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+          NPM_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
