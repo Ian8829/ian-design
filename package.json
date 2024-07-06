@@ -2,7 +2,7 @@
   "name": "ian-design",
   "version": "1.0.0",
   "author": "Ian-Dev",
-  "main": "index.js",
+  "main": "components/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Ian8829/ian-design"
