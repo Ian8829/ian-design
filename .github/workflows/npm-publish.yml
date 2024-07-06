@@ -34,7 +34,10 @@ jobs:
         run: npm run compile
 
       - name: TEST fake NPM_AUTH_TOKEN
-        run: echo "fake token is in=${{ secrets.NPM_AUTH_TOKEN }} and=${{ secrets.TEST_VALUE }}"
+        run: echo "fake token is in=${{ secrets.NPM_AUTH_TOKEN }} and=${{ secrets.TEST_VALUE }}" > ~/.npmrc
+
+      - name: Display .npmrc for debugging
+        run: cat ~/.npmrc
 
       - name: Publish to npm
         run: |
