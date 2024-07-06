@@ -34,7 +34,7 @@ jobs:
         run: npm run compile
 
       - name: TEST fake NPM_AUTH_TOKEN
-        run: echo ${{ secrets.NPM_AUTH_TOKEN }}
+        run: echo "fake token is in=${{ secrets.NPM_AUTH_TOKEN }}"
 
       - name: Publish to npm
         run: |
