@@ -8,22 +8,22 @@ export type ITimelineListItemProps = {
   title: string
   description: string
   isLast: boolean
-  imgName: string | null
+  profileSrc: string | null
 }
 
 const ITimelineListItem: FC<ITimelineListItemProps> = ({
   title,
   description,
   isLast,
-  imgName,
+  profileSrc,
 }) => {
-  const defaultProfile = 'default_profile'
+  const defaultProfile = 'default_profile.jpg'
 
   return (
     <StyledTimelineContainer>
       <StyledImagAndLineWrapper>
         <StyledImageProfile
-          src={`/icons/${imgName ?? defaultProfile}.jpg`}
+          src={profileSrc ?? defaultProfile}
           alt='default image'
           width={24}
           height={24}

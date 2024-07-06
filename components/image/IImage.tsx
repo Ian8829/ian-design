@@ -1,7 +1,6 @@
 import { FC, useState } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
-import { isMobile } from 'react-device-detect'
 
 type IImageProps = {
   imgSrc: string

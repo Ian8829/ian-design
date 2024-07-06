@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FieldValues, UseFormRegister } from 'react-hook-form'
 
 import IFormErrorMessage from './IFormErrorMessage'
+import IInput from '../input/IInput'
 
 type IFormItemInputProps = {
   label: string
@@ -20,7 +21,7 @@ const IFormItemInput: FC<IFormItemInputProps> = ({
   return (
     <StyledIFormItemInputWrapper>
       <label>{label}</label>
-      <input {...register(name)} />
+      <IInput register={register} name={name} />
       <IFormErrorMessage message={errorMessage} />
     </StyledIFormItemInputWrapper>
   )
@@ -30,14 +31,6 @@ const StyledIFormItemInputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-
-  input {
-    height: 32px;
-    border: none;
-    border-radius: 4px;
-    padding: 0 4px;
-    background-color: #262626;
-  }
 `
 
 export default IFormItemInput

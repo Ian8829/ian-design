@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FieldValues, UseFormRegister } from 'react-hook-form'
 
 import IFormErrorMessage from './IFormErrorMessage'
+import ITextArea from '../textarea/ITextarea'
 
 type IFormItemInputProps = {
   label: string
@@ -20,7 +21,9 @@ const IFormItemTextarea: FC<IFormItemInputProps> = ({
   return (
     <StyledIFormItemTextareaWrapper>
       <label>{label}</label>
-      <textarea {...register(name)} />
+
+      <ITextArea register={register} name={name} />
+
       <IFormErrorMessage message={errorMessage} />
     </StyledIFormItemTextareaWrapper>
   )
@@ -30,14 +33,6 @@ const StyledIFormItemTextareaWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-
-  textarea {
-    height: 160px;
-    border: none;
-    border-radius: 4px;
-    padding: 4px;
-    background-color: #262626;
-  }
 `
 
 export default IFormItemTextarea
