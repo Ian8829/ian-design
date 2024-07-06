@@ -43,6 +43,15 @@ jobs:
         env:
           ACTIONS_PAT: ${{ secrets.ACTIONS_PAT }}
 
+      - name: Configure npm with auth token
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+      - name: Display .npmrc for debugging
+        run: cat ~/.npmrc
+
       - name: Publish to npm
         run: |
           npm publish
