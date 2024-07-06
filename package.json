@@ -9,8 +9,8 @@
     "url": "https://github.com/Ian8829/ian-design"
   },
   "files": [
-    "dist"
-  ],
+      "dist"
+    ],
   "license": "MIT",
   "keywords": [
     "npm",
