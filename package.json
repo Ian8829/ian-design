@@ -1,6 +1,6 @@
 {
   "name": "ian-design",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "author": "Ian-Dev",
   "main": "dist/components/index.js",
   "types": "dist/components/index.d.ts",
@@ -21,7 +21,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "compile": "rm -rf dist && mkdir dist && tsc"
+    "compile": "rm -rf dist && mkdir dist && tsc",
+    "publish": "publish --access public"
   },
   "dependencies": {
     "next": "14.2.4",
