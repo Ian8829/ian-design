@@ -41,7 +41,7 @@ jobs:
           git commit -m "Update package version"
           git push
         env:
-          GIT_COMMIT_TOKEN: ${{ secrets.GIT_COMMIT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to npm
         run: |
