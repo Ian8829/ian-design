@@ -33,16 +33,6 @@ jobs:
       - name: Compile package
         run: npm run compile
 
-      - name: Commit and push changes
-        run: |
-          git config --global user.email "ghjkghj@naver.com"
-          git config --global user.name "ian8829"
-          git add package.json
-          git commit -m "Update package version"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Publish to npm
         run: |
           npm publish --access public
