@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-type IImageProps = {
+export type IImageProps = {
   imgSrc: string
   width: number
   height: number

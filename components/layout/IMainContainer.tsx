@@ -3,7 +3,7 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 
-type IMainContainerProps = {
+export type IMainContainerProps = {
   children: React.ReactNode
 }
 

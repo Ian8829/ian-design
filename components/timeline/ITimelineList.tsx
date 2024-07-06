@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import ITimelineListItem, { ITimelineListItemProps } from './ITimelineListItem'
 
-type ITimelineListProps = {
+export type ITimelineListProps = {
   timelineData: Omit<ITimelineListItemProps, 'isLast'>[]
 }
 

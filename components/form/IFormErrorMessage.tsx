@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 
-type IFormErrorMessageProps = {
+export type IFormErrorMessageProps = {
   message?: string
 }
 

@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { FieldValues, UseFormRegister } from 'react-hook-form'
 import styled from 'styled-components'
 
-type ITextAreaProps = {
+export type ITextAreaProps = {
   register?: UseFormRegister<FieldValues>
   name?: string
 }

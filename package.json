@@ -1,8 +1,9 @@
 {
   "name": "ian-design",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "author": "Ian-Dev",
-  "main": "components/index.js",
+  "main": "dist/components/index.js",
+  "types": "dist/components/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Ian8829/ian-design"
@@ -19,7 +20,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "compile": "rm -rf dist && mkdir dist && tsc"
   },
   "dependencies": {
     "next": "14.2.4",
@@ -29,7 +31,7 @@
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.14.10",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",

@@ -5,7 +5,7 @@ import { FieldValues, UseFormRegister } from 'react-hook-form'
 import IFormErrorMessage from './IFormErrorMessage'
 import IInput from '../input/IInput'
 
-type IFormItemInputProps = {
+export type IFormItemInputProps = {
   label: string
   name: string
   register: UseFormRegister<FieldValues>
